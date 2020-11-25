@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0px;
+    font-family: 'poppins', sans-serif;
+}
+
+.container
+{
+    position: relative;
+    padding: 0 100px;
+    min-height: 100vh;
+    
+    
+}
+
+.container:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background: #333;
+    z-index: -2;
+
+}
+.container:after
+{
+    content: 'Healthy';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18vw;
+    z-index: -2;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.05;
+
+
+}
+
+header
+{
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+
+}
+header .logo{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+header .logo span{
+    color: #78ff00;
+
+}
+
+header ul
+{
+    position: relative;
+    display: flex;
+
+}
+
+header ul li{
+    list-style: none;
+    margin: 0 20px;
+}
+
+header ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 4px 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+header ul li:nth-child(3) a,
+header ul li:nth-child(4) a
+{
+    color: #fff;
+}
+
+header ul li a:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #78ff00;
+    z-index: -1;
+    transition: 0.5s ease-in-out;
+}
+header ul li a:hover:before,
+header ul li a.active:before
+{
+    width: 40px;
+}
+
+.content
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.content .banner-text
+{
+
+    position: relative;
+    max-width: 600px;
+    margin-right: 50px;
+}
+.content .banner-text div{
+    display: none;
+}
+
+.content .banner-text div.active
+{
+    display: initial;
+}
+.content .banner-text h2{
+
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 1.2em;
+    color: #333;
+}
+
+.content .banner-text p
+{
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    margin: 20px 0;
+    text-align: inherit;
+}
+
+/* READ MORE BUTTON HERE*/
+
+.click {
+    border-radius: 4px;
+    background-color: rgb(120, 255, 0);
+    border: none;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .click span {
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .click span:after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+  }
+  
+  .click:hover span {
+    padding-right: 15px;
+  }
+  
+  .click:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+#more {display: none;}
+
+.content .bannerImg
+{
+    position: relative;
+    width: 440px;
+    height: 440px;
+    background-color: #333;
+
+}
+
+.content .bannerImg img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    opacity: 0;
+}
+.content .bannerImg img.active
+{
+    opacity: 1;
+}
+.icons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.icons .sci,
+.icons .controls
+{
+    position: relative;
+    display: flex;
+    
+}
+
+.icons .sci li
+{
+    list-style: none;
+    margin-right: 30px;
+}
+
+.icons .sci li img
+{
+    display: flex;
+    max-height: 24px;
+    transition: 0.5s ease-in-out;
+}
+
+.icons .sci li:hover img
+{
+    transform: translateY(-10px);
+}
+
+.icons .controls li
+{   
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.icons .controls li:hover
+{
+    opacity: 0.5;
+}
+
+    .menuIcon
+    {
+        display: none;
+    }
+@media (max-width: 992px)
+{   
+    .container
+    {
+        padding: 20px 50px;
+    }
+    .container:before
+    {
+        display: none;
+    }
+    header
+    {
+        padding: 0;
+
+    }
+    .icons .controls li {
+        filter: invert(0);
+    }
+    .content .banner-text h2{
+        font-size: 30px;
+    }
+    .content{
+        margin-top: 0;
+        flex-direction: column-reverse;
+    }
+    .content .bannerImg
+    {
+        width: 100%;
+        height: 40vh;
+        margin: 20px 0;
+    }
+    .content .banner-text
+    {
+        max-width: 100%;
+        padding-right: 0;
+    }
+    header ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        z-index: 10000;
+        padding: 100px 0;
+
+    }
+    header.active ul
+    {
+        display: initial;
+    }
+    header ul li{
+        padding: 20px;
+        text-align: center;
+        
+    }
+    header ul li a {
+        color: #333 !important;
+        font-size: 36px;
+    }
+
+    header ul li a:hover:before,
+    header ul li a.active:before
+    {
+        width: 100%;
+    }
+    .menuIcon
+    {
+        display: initial;
+        position: fixed;
+        right: 50px;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 100000;
+        background: #fff url(open-menu.png);
+        width: 34px;
+        height: 34px;
+        background-repeat: no-repeat;
+        background-position: 6px;
+    }
+    header.active .menuIcon
+    {
+        background: #fff url('close\ \(1\).png');
+        background-repeat: no-repeat;
+        background-position: 6px;
+    }
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+@media (max-width: 767px)
+{
+    .container{
+        padding: 20px 30px;
+    }
+    .menuIcon{
+        right: 30px;
+    }
+    .icons .controls li img{
+        max-width: 40px;
+    }
+}

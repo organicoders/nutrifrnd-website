@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com css?family=poppins:300,400,600,700');
+
+body
+{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  min-height: 100vh;
+  background: whitesmoke;
+  font-family: 'poppins' , sans-serif;
+  text-align: left;
+  background-image: url('Page-Image.jpg');
+}
+
+.card
+{
+  position: relative;
+  background-color:#fff;
+  width: 500px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+.card .content
+{
+  width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  
+}
+
+.card .slidertext
+{
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  background: #a11a6d;
+
+}
+
+.card .slidertext h3
+{
+    color: #fff;
+    font-size: 3em;
+}
+
+.swiper-container
+{
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide
+{
+  text-align: center;
+  font-size: 18px;
+  
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: left;
+}
+
+.swiper-slide:nth-child(1) .slidertext
+{
+  background: #2196f3;
+}
+
+.swiper-slide:nth-child(2) .slidertext
+{
+  background: #24b617;
+}
+
+.swiper-slide:nth-child(3) .slidertext
+{
+  background: #bbc941;
+}
+
+.swiper-slide:nth-child(4) .slidertext
+{
+  background: #eb6784;
+}
+
+.content h4{
+  text-align: left;
+}
+
+.content p{
+  text-align: left;
+}
