@@ -1,2 +1,2 @@
 # Decov/nutrifrnd
-https://organicoders.github.io/Decov/
+https://organicoders.github.io/nutrifrnd-website/
